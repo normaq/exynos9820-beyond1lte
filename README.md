@@ -85,7 +85,7 @@ After editing the configuration in the browser, save it and **commit**.
 Next, you need to **switch** to the "Actions" tab. At this step you will find that
 GitHub starts to build the kernel. You need to **wait** about 25-30 mins while github builds
 the kernel. If the build is successfully finished, you will find your boot.img in the Artifacts
-section.
+section. Download it, unzip and flash.
 
 To keep your version of the sources in sync with main tree, please look at this tutorial:
 https://stackoverflow.com/questions/20984802/how-can-i-keep-my-fork-in-sync-without-adding-a-separate-remote/21131381#21131381
