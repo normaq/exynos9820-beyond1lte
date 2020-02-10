@@ -29,9 +29,10 @@ Flash boot.img with FK Manager.
 
 It's possible to customize the kernel and build it from the browser.
 First of all, create and account on GitHub. Next, **fork** this repository.
-At this step you've got your copy of the sources and you can build it with
-GitHub Actions. You need to open github actions [configuration file](.github/workflows/main.yml)
-and **edit** it from the browser. For example, to alter the kernel configuration
+**Switch** to the "Actions" tab and activate GitHub Actions. At this step you've
+got your copy of the sources and you can build it with GitHub Actions. You need
+to open github actions [configuration file](.github/workflows/main.yml) and
+**edit** it from the browser. For example, to alter the kernel configuration
 you need to edit lines:
 ```YAML
     - name: Kernel Configure
