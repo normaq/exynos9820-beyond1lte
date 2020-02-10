@@ -8,7 +8,8 @@ Based on samsung sources and android common tree.
 
 This kernel works on BSKO, BSL4, BTA8 firmware.
 First of all, TWRP Recovery + multidisabler should be installed in all cases.
-It's a preliminary step.
+It's a preliminary step. Next, backup your existing kernel. You will be able
+to restore it from TWRP Recovery in case of problems.
 
 ### TWRP
 
@@ -44,9 +45,10 @@ you need to edit lines:
                 +cifs
 ```
 
-You can change the name of the kernel by replacing ```name=CRUEL-V2-BTA8``` with, for example,
-```name=my_own_kernel```. You can remove wireguard from the kernel if you don't need it
-by changing "+" to "-" or by removing the "+wireguard" line and "\\" on the previous line.
+You can change the name of the kernel by replacing ```name=CRUEL-V2-BTA8``` with,
+for example, ```name=my_own_kernel```. You can remove wireguard from the kernel
+if you don't need it by changing "+" to "-" or by removing the "+wireguard" line
+and "\\" on the previous line.
 
 Available configuration presets can be found at [configs](kernel/configs/) folder.
 Only the *.conf files prefixed with "cruel" are meaningful.
@@ -64,8 +66,8 @@ For example:
   from this config by default. It's safe to enable this config, it just makes
   your system less secure.
 * nohardening2 - removes Android kernel self-protection mechanisms. Potentially
-  can increase the kernel performance. Don't use it if you don't know what you are doing.
-  Almost completely disables kernel self-protection. Very insecure.
+  can increase the kernel performance. Don't use it if you don't know what you are
+  doing. Almost completely disables kernel self-protection. Very insecure.
 * 300hz - increases kernel clock rate from 250hz to 300hz. Potentially can
   decrease response time. Disabled by default, untested.
 * 1000hz - increases kernel clock rate from 250hz to 1000hz. Potentially can
