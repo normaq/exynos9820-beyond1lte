@@ -90,6 +90,34 @@ section. Download it, unzip and flash.
 To keep your version of the sources in sync with main tree, please look at this tutorial:
 https://stackoverflow.com/questions/20984802/how-can-i-keep-my-fork-in-sync-without-adding-a-separate-remote/21131381#21131381
 
+## How to build the kernel locally on your PC
+
+This instructions assumes you are using Linux. Install mkbootimg, heimdall
+(if you want to flash the kernel automatically).
+
+Next:
+```sh
+$ git clone https://github.com/CruelKernel/exynos9820-beyond1lte
+$ cd exynos9820-beyond1lte
+# List available branches
+$ git branch -a | grep remotes | grep cruel | cut -d '/' -f 3
+# Switch to the branch you need
+$ git checkout samsung-g973f-bta8-cruel
+# Install compilers
+$ git submodule update --init --recursive
+# Compile
+$ ./build mkimg name=CustomCruel +magisk+canary +wireguard +ttl +cifs +nohardening
+# You will find your kernel in boot.img file after compilation.
+$ ls -lah ./boot.img
+
+# You can automatically flash the kernel with heimdall
+# if you connect your phone to the PC and execute:
+$ ./build :flash
+
+# Or in a single command (compilation with flashing)
+# ./build flash name=CustomCruel +magisk+canary +wireguard +ttl +cifs +nohardening
+```
+
 ## Support
 
 - [Telegram](https://t.me/joinchat/GsJfBBaxozXvVkSJhm0IOQ)
