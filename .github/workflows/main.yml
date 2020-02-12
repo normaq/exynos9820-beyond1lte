@@ -25,6 +25,7 @@ jobs:
       run: |
         ./build config name=CRUEL-V2-BTA8 \
                 +magisk                   \
+                +nohardening              \
                 +ttl                      \
                 +wireguard                \
                 +cifs
