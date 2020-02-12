@@ -61,13 +61,12 @@ For example:
 * wireguard - adds wireguard module to the kernel.
 * cifs - adds CIFS fs support.
 * nohardening - removes Samsung kernel self-protection mechanisms. Potentially
-  can increase the kernel performance. You can enable this config if you face
-  rooting or some other kind of restrictions. Other kernels usually use settings
-  from this config by default. It's safe to enable this config, it just makes
-  your system less secure.
+  can increase the kernel performance. Enabled by default. Disable this if you
+  want to make your system more secure.
 * nohardening2 - removes Android kernel self-protection mechanisms. Potentially
   can increase the kernel performance. Don't use it if you don't know what you are
   doing. Almost completely disables kernel self-protection. Very insecure.
+* nodebug - remove debugging information from the kernel.
 * 300hz - increases kernel clock rate from 250hz to 300hz. Potentially can
   decrease response time. Disabled by default, untested.
 * 1000hz - increases kernel clock rate from 250hz to 1000hz. Potentially can
