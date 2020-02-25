@@ -23,7 +23,7 @@ jobs:
       run: git submodule update --init --recursive
     - name: Kernel Configure
       run: |
-        ./build config name=NROMkernel_1.0 \
+        ./build config name=NROMkernel \
                 +magisk                   \
                 +nohardening              \
                 +ttl                      \
